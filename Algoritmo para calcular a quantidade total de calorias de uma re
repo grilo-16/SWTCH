@@ -1,0 +1,74 @@
+#include <stdio.h>
+
+int main() {
+    int prato, sobremesa, bebida;
+    int calorias_prato = 0, calorias_sobremesa = 0, calorias_bebida = 0;
+
+    printf("Digite o código do prato (1 a 4): ");
+    scanf("%d", &prato);
+
+    printf("Digite o código da sobremesa (1 a 4): ");
+    scanf("%d", &sobremesa);
+
+    printf("Digite o código da bebida (1 a 4): ");
+    scanf("%d", &bebida);
+
+    switch (prato) {
+        case 1:
+            calorias_prato = 180;
+            break;
+        case 2:
+            calorias_prato = 230;
+            break;
+        case 3:
+            calorias_prato = 250;
+            break;
+        case 4:
+            calorias_prato = 350;
+            break;
+        default:
+            printf("Código de prato inválido\n");
+            return 1;
+    }
+
+    switch (sobremesa) {
+        case 1:
+            calorias_sobremesa = 75;
+            break;
+        case 2:
+            calorias_sobremesa = 110;
+            break;
+        case 3:
+            calorias_sobremesa = 170;
+            break;
+        case 4:
+            calorias_sobremesa = 230;
+            break;
+        default:
+            printf("Código de sobremesa inválido\n");
+            return 1;
+    }
+
+    switch (bebida) {
+        case 1:
+            calorias_bebida = 20;
+            break;
+        case 2:
+            calorias_bebida = 70;
+            break;
+        case 3:
+            calorias_bebida = 100;
+            break;
+        case 4:
+            calorias_bebida = 65;
+            break;
+        default:
+            printf("Código de bebida inválido\n");
+            return 1;
+    }
+
+    int total_calorias = calorias_prato + calorias_sobremesa + calorias_bebida;
+    printf("Total de calorias da refeição: %d\n", total_calorias);
+
+    return 0;
+}
